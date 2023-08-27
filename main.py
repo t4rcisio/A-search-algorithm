@@ -6,7 +6,6 @@
     
     A* labirinto
     Tarcísio Prates
-    Henrique Lima
 
 '''
 

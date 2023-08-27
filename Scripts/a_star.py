@@ -25,7 +25,7 @@ class AStar_script:
                 # ROW   = Índice da linha onde está o bloco
                 # COL   = Índice da coluna onde está o bloco
                 # TEXT  = Recebe a linha e a coluna no formato de texto ( para uso gráfico )
-                # DTT   = Distance to Target, recebe o valor da hipotenusa até o bloco de destino
+                # DTT   = Distance to Target, recebe o valor da distância até o bloco de destino
 
                 self.table[linha].append(config)
 
@@ -63,6 +63,7 @@ class AStar_script:
         self.__openTree(self.tree[key])
 
 
+        # Salva os caminhos encontrados
         self.broadcast.waysMap(self.ways)
 
 
