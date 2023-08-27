@@ -1,3 +1,17 @@
+
+'''
+    Inteligência Artificial
+    CEFET-MG
+    27/0/2023
+    
+    A* labirinto
+    Tarcísio Prates
+    Henrique Lima
+
+'''
+
+
+
 import os
 import sys
 
