@@ -5,7 +5,7 @@ class Broadcast():
 
     def __init__(self):
 
-        mainDir = "C:\databse"
+        mainDir = "C:\storageIA"
 
         if not os.path.exists(mainDir):
             os.mkdir(mainDir)
