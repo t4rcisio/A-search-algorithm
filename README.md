@@ -1,31 +1,40 @@
 # Algoritmo de Busca A*
 
-## Projeto de Inteligência Artificial
-Resolvedor de Labirinto A*
+## Projeto de Inteligência Artificial - Labirinto A*
 
-### Requisitos
+Este projeto implementa o algoritmo de busca A* para resolver labirintos.
 
-Ambiente de Desenvolvimento: Windows
-Linguagem: Python 3.11.4
+## Requisitos
 
-Bibliotecas Python:
+- **Ambiente de Desenvolvimento:** Windows
+- **Linguagem:** Python 3.11.4
 
-- PyQt5: `pip install PyQt5`
-- pickle5: `pip install pickle5`
+## Bibliotecas Python
 
-### Arquivo Principal
+Para executar este projeto, instale as seguintes bibliotecas usando o `pip`:
 
-Execute o seguinte comando para executar o programa:
+```bash
+pip install PyQt5 pickle5
+```
+Talvez outras bibliotecas sejam necessárias.
+
+## Execução do código
+
+Para executar a aplicação:
+
+```bash
+python main.py
+```
+
+## Personalização do Labirinto**
+   - Clique nos blocos para definir o ponto de partida, o ponto de destino e os blocos intransponíveis.
+   - Clique no botão "BUSCAR" para que o algoritmo encontre o caminho entre o ponto de partida e o ponto de destino.
+   - Após o processamento, você pode usar o botão "Próximo Caminho" para visualizar todos os caminhos encontrados.
+
+## Como o Algoritmo Funciona
+
+Ao definir um ponto de partida e um ponto de destino, o algoritmo calcula inicialmente as distâncias entre todos os pontos da tabela até o destino. Isso é feito usando o método de Manhattan, que calcula a soma das diferenças entre as coordenadas dos pontos. Em seguida, o algoritmo começa a iteração, especulando sobre os nós adjacentes ao nó atual. Os movimentos são restritos às direções para cima, baixo, esquerda e direita. As opções são ordenadas de acordo com a estimativa de Manhattan, permitindo que o algoritmo explore os caminhos mais promissores primeiro. O algoritmo continua a percorrer os nós até encontrar o destino, armazenando os caminhos percorridos. Se forem encontrados caminhos, eles são exibidos após o processamento.
 
 
-### Modificando a Tabela
-
-Para modificar a tabela, clique nos blocos e selecione um ponto de partida e um destino. Você também pode adicionar blocos intransponíveis, se necessário. Após fazer isso, clique no botão "BUSCAR" para executar o algoritmo.
-
-Após o processamento, se forem encontrados caminhos, o botão "Próximo Caminho" exibirá todos os caminhos que foram descobertos.
-
-### Funcionamento do Algoritmo
-
-Ao fornecer um ponto de partida e um destino, o primeiro passo é calcular a distância de todos os pontos da tabela até o bloco de destino. Isso é feito usando o método de Manhattan, que envolve calcular a soma das diferenças entre as coordenadas dos pontos. Este método foi escolhido pois utiliza menos recursos computacionais em comparação com o cálculo do teorema de Pitágoras, já que envolve apenas adição e subtração. Em seguida, a iteração começa, onde o algoritmo especula sobre nós adjacentes ao nó atual, restringindo-se apenas aos movimentos para cima, baixo, esquerda e direita. Essas opções são então ordenadas de acordo com a menor estimativa de Manhattan. Dessa forma, o algoritmo percorre os nós tentando encontrar o nó de destino. Se encontrado, ele armazena o percurso e continua avaliando outros nós se o custo for igual ou menor do que o que foi encontrado.
 
 
