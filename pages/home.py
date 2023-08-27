@@ -16,6 +16,7 @@ from Scripts import a_star
 from Utils import broadcast
 
 from threads import a_starThread
+import sys
 
 
 class Ui_Form(object):
@@ -430,7 +431,7 @@ class Ui_Form(object):
 
                 if self.table[linha][coluna]["STATE"] != 'BLOCKED':
 
-                    self.a_star.pitagoras(self.table[linha][coluna], self.table[self.currentEnd[0]][self.currentEnd[1]])
+                    self.a_star.manhattan(self.table[linha][coluna], self.table[self.currentEnd[0]][self.currentEnd[1]])
                     self.buttomList[index].setText(str(linha) + "," + str(coluna) + " | D: " + str(format(self.table[linha][coluna]["DTT"], '.2f')))
 
                 else:

@@ -197,8 +197,8 @@ class AStar_script:
 
 
 
-    # Calcula a distância entre um dado bloco e o bloco de destino, usando pitágoras
-    def pitagoras(self, currentBloc, destBloc ):
+    
+    def pitagoras_(self, currentBloc, destBloc ):
 
 
                 cateto_a =  abs(destBloc["ROW"] - currentBloc["ROW"])
@@ -208,6 +208,18 @@ class AStar_script:
                 cateto_b = math.pow(cateto_b, 2)
 
                 distance = math.sqrt(cateto_b + cateto_a)
+
+                currentBloc["DTT"] = distance
+                
+    # Calcula a distância entre um dado bloco e o bloco de destino, o método da Distância de Manhattan
+    def manhattan(self, currentBloc, destBloc ):
+
+
+                dif_x =  abs(destBloc["ROW"] - currentBloc["ROW"])
+                dif_y =  abs(destBloc["COL"] - currentBloc["COL"])
+
+
+                distance = dif_x + dif_y
 
                 currentBloc["DTT"] = distance
 
